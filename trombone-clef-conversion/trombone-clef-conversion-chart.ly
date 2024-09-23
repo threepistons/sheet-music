@@ -25,7 +25,7 @@ brassband = \relative c {
   b2-2 cf
   bs2-1 c
   cs2-7 df
-  css2-1 d |
+  css2-6 d |
   ds2-5 ef
   e2-4 ff
   es2-3 f
