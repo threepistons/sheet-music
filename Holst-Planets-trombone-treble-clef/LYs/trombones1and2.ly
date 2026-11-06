@@ -15,6 +15,45 @@
 }
 
 \book {
+
+  \markup {
+    \column {
+      \vspace #2
+
+      "II: Venus, the Bringer of Peace"
+      \vspace #2
+
+      \fill-line {
+        \null
+        \fontsize #5 \bold "TACET"
+        \null
+      }
+
+      \fill-line {
+        \null
+        \italic "(Nothing to play in this movement.)"
+        \null
+      }
+
+      \vspace #2
+    }
+  }
+
+  \markup {
+    \column {
+      "III: Mercury, the Winged Messenger"
+      \vspace #2
+
+      \fill-line {
+        \null
+        \fontsize #5 \bold "TACET"
+        \null
+      }
+
+      \vspace #2
+    }
+  }
+
   \score {
     \header {
       piece = "V: Saturn, the Bringer of Old Age"
