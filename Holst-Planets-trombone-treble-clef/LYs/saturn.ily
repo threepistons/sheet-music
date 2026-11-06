@@ -1,3 +1,8 @@
+\version "2.24.0"
+
+% Most of Saturn is in tenor clef, so I read it as though it were B flat treble and
+% did inline transposition of just the bass clef sections.
+
 satone = \relative c'' {
   \set Score.rehearsalMarkFormatter = #format-mark-circle-numbers
   \compressEmptyMeasures

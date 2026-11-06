@@ -11,6 +11,9 @@ parts: $(addprefix parts-,$(SUBDIRS))
 midi: $(addprefix midi-,$(SUBDIRS))
 
 clean: $(addprefix clean-,$(SUBDIRS))
+	find . -name '*.pdf' -type f -delete
+	find . -name '*.mid' -type f -delete
+	find . -name '*.midi' -type f -delete
 
 parts-%:
 	$(MAKE) -C $* parts
