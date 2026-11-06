@@ -10,6 +10,10 @@
   composer = "Gustav Holst"
 }
 
+\paper {
+  page-breaking = #ly:page-turn-breaking
+}
+
 \book {
   \score {
     \header {
@@ -18,8 +22,16 @@
     \layout {
       \context {
         \Staff \override MultiMeasureRest.expand-limit = #1
+        \consists "Page_turn_engraver"
+      }
+      \context {
+        \StaffGroup
+        \consists "Page_turn_engraver"
+        minimumPageTurnLength = #(ly:make-moment 8/4)
+        minimumRepeatLengthForPageTurn = #(ly:make-moment 8/4)
       }
     }
+
     % Most of Saturn is in tenor clef, so I read it as though it were B flat treble and
     % did inline transposition of just the bass clef sections.
     \new StaffGroup <<
@@ -39,10 +51,16 @@
     }
     \layout {
       \context {
-        \Staff \override MultiMeasureRest.expand-limit = #1
+        \Staff
+        \override MultiMeasureRest.expand-limit = #1
         \consists "Measure_grouping_engraver"
-        \remove "Rest_engraver"
-        \consists "Completion_rest_engraver"
+        % Define the threshold for the entire group collectively
+      }
+      \context {
+        \StaffGroup
+        \consists "Page_turn_engraver"
+        minimumPageTurnLength = #(ly:make-moment 10/4)
+        minimumRepeatLengthForPageTurn = #(ly:make-moment 10/4)
       }
     }
     % This whole movement is in bass clef, so I wrote it in at-pitch and
