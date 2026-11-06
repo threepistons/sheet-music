@@ -39,7 +39,7 @@ satone = \relative c'' {
   \transpose bf c'' {
     r4 gf\f_"pesante" r f |
     r4 g?\ff r fs
-    r4 g?\< r fs
+    r4 g\< r fs
     r4 bf\fff r a |
     r4 bf \tempo "animato" r2
     R1
