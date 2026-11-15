@@ -1,0 +1,28 @@
+name: LilyPond
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install LilyPond
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lilypond
+
+      - name: Build PDFs
+        run: make
+
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: sheet-music-pdfs
+          path: |
+            **/PDFs/*.pdf
