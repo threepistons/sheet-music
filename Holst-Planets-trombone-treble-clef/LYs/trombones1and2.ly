@@ -2,6 +2,7 @@
 
 \include "english.ly"
 \include "./saturn.ily"
+\include "./uranus.ily"
 \include "./neptune.ily"
 
 \header {
@@ -84,6 +85,38 @@
       } \sattwo
     >>
   }
+
+  \score {
+    \header {
+      piece = "VI: Uranus, the Magician"
+    }
+    \layout {
+      \context {
+        \Staff \override MultiMeasureRest.expand-limit = #1
+        \consists "Page_turn_engraver"
+      }
+      \context {
+        \StaffGroup
+        \consists "Page_turn_engraver"
+        minimumPageTurnLength = #(ly:make-moment 8/4)
+        minimumRepeatLengthForPageTurn = #(ly:make-moment 8/4)
+      }
+    }
+
+    % Most of Uranus is in tenor clef, so I read it as though it were B flat treble and
+    % did inline transposition of just the bass clef sections.
+    \new StaffGroup <<
+      \new Staff \with {
+        instrumentName = "Trom 1 "
+        shortInstrumentName = "1. "
+      } \urone
+      \new Staff \with {
+        instrumentName = "Trom 2 "
+        shortInstrumentName = "2. "
+      } \urtwo
+    >>
+  }
+
   \score {
     \header {
       piece = "VII: Neptune, the Mystic"
