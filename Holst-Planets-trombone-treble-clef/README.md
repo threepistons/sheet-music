@@ -32,7 +32,9 @@ Low brass players are not uniform in what instruments we can play, nor in what c
 | baritone saxhorn or euphonium | brass band treble clef | [IMSLP (Ottaviano)][1] |
 | tuba | bass clef | [IMSLP (Ottaviano)][1] |
 | tenor trombone | brass band treble clef | Here |
+| bass trombone | brass band treble clef | Unavailable, to my knowledge |
 | baritone saxhorn or euphonium | bass clef | [IMSLP (Chester Chow)][2] |
+| tuba | bass clef | Unavailable, to my knowledge |
 
 [a]: The tenor trombone parts are also available in just bass clef by scrolling down the tenor trombone PDF, as the parts are printed twice: once in mixed clefs and again in bass clef only.  The table reports on the mixed-clef version, as a "brass band clef" reader might otherwise start [reading the tenor clef][3], only to run face-first into a bass clef part-way through.  
 
