@@ -28,7 +28,7 @@ Low brass players are not uniform in what instruments we can play, nor in what c
 | You play... | You read... | Get your parts from... |
 |------------|-------------|-----------|
 | tenor trombone | bass clef, or bass and tenor clef [a] | [IMSLP (Ottaviano)][1]  |
-| bass trombone | bass clef | IMSLP[IMSLP (Ottaviano)][1] |
+| bass trombone | bass clef | [IMSLP (Ottaviano)][1] |
 | baritone saxhorn or euphonium | brass band treble clef | [IMSLP (Ottaviano)][1] |
 | tuba | bass clef | [IMSLP (Ottaviano)][1] |
 | tenor trombone | brass band treble clef | Here |
