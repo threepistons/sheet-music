@@ -49,7 +49,7 @@ urone = \relative c'' {
   }
   R1 \mark \default
   R1 * 7
-  r2 d4.\fff( e8) |
+  r2 d4.\fff\( e8\) |
   e1~
   e2 d4.(\dim e8) |
   e1~
