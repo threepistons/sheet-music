@@ -1,69 +1,57 @@
 \version "2.24.0"
 
-% This whole movement is in bass clef, so I wrote it in at-pitch and
-% transposed in the part-rendering file.
+% Most of this movement is in tenor clef.
+% The bars shown are the two systems that have bass clef in.
 
-nepone = \relative c {
+jupone = \relative c' {
   \set Score.rehearsalMarkFormatter = #format-mark-circle-numbers
+  \set Score.currentBarNumber = #309
   \compressEmptyMeasures
-  \key c \major
-  \time 3,2 5/4
-  \tempo "Andante"
-  r2. r2 \omit Staff.MeasureGrouping
-  r2. r2
-  r2. c'2~\pp
-  c2. r2
-  R1*5/4*9 | \mark \default R1*5/4*8
-  gs2.\pp~gs2~ |
-  gs2. e2 |
-  gs2.~ gs2 \mark \default
-  R1*5/4*10 \mark \default
-  gs2. e2 |
-  gs2. e2 |
-  ef2.~ ef2
-  fs2.~ fs2
-  R1*5/4*5
-  bf,2.~bf2 \mark \default
-  R1*5/4*3
-  gs'2.~ gs2~
-  gs2.~ gs2 \mark \default \tempo "Allegretto"
-  R1*5/4*20 \mark \default
-  R1*5/4*15
-  r2 e4~ e2~ |
-  e2.~ e2~
-  e2.~ e2
-  R1*5/4*14 \bar "|."
+  \key d \major
+  \time 2/4
+  \tempo "a tempo"
+  r8 e' r e
+  r8 e r e
+  r8 fs r fs
+  r8 fs r fs
+  r8 fs r fs |
+  r8 d r b
+% Satan's clef section
+  \transpose bf c \relative c'' {
+    r8 d r b\>
+    r8 b r b
+    c'8\p r b r
+    a8 r d, r |
+    g,8 r b r
+    d8 r e r
+    a8 r g r
+    fs8 r e r |
+    d8 r cs r
+    b8 r a r
+    g r f r
+    e8 r4.
+    R2 *2
+  }
 }
 
-neptwo = \relative c {
+juptwo = \relative c' {
   \set Score.rehearsalMarkFormatter = #format-mark-circle-numbers
+  \set Score.currentBarNumber = #309
   \compressEmptyMeasures
-  \key c \major
-  \time 3,2 5/4
-  \tempo "Andante"
-  r2. r2 \omit Staff.MeasureGrouping
-  r2. r2
-  r2. e2~\pp
-  e2. r2
-  R1*5/4*9 | \mark \default R1*5/4*8
-  ds2.\pp~ ds2~ |
-  ds2. b2 |
-  ds2.~ ds2 \mark \default
-  R1*5/4*10 \mark \default
-  ds2. b2
-  ds2. b2 |
-  bf2.~ bf2
-  fs2.~ fs2
-  R1*5/4*5
-  bf,2.~-"pedal in 1st" bf2 \mark \default
-  R1*5/4*3
-  ds'2.~ ds2~
-  ds2.~ ds2 \mark \default \tempo "Allegretto"
-  R1*5/4*20 \mark \default
-  R1*5/4*15
-  r2 b4~ b2~ |
-  b2.~ b2~
-  b2.~ b2
-  R1*5/4*14 \bar "|."
- \bar "|."
+  \key d \major
+  \time 2/4
+  \tempo "a tempo"
+  r8 b' r b
+  r8 b r b
+  r8 cs r cs
+  r8 cs r cs
+  r8 d r d |
+  r8 b r fs
+% Satan's clef section
+  \transpose bf c \relative c'' {
+    r8 c r g\>
+    r8 g r g\!
+    R2 * 10
+    R2 * 2
+  }
 }

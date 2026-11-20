@@ -1,6 +1,7 @@
 \version "2.24.0"
 
 \include "english.ly"
+\include "./jupiter.ily"
 \include "./saturn.ily"
 \include "./uranus.ily"
 \include "./neptune.ily"
@@ -16,6 +17,23 @@
 }
 
 \book {
+  
+  \markup {
+    \column {
+      \vspace #2
+
+      "I: Mars, the Bringer of War"
+      \vspace #2
+
+      \fill-line {
+        \null
+        \fontsize #3 \bold "Read tenor clef original."
+        \null
+      }
+
+      \vspace #2
+    }
+  }
 
   \markup {
     \column {
@@ -26,7 +44,7 @@
 
       \fill-line {
         \null
-        \fontsize #5 \bold "TACET"
+        \fontsize #3 \bold "TACET"
         \null
       }
 
@@ -41,18 +59,72 @@
   }
 
   \markup {
-    \column {
+    \column {\vspace #2
       "III: Mercury, the Winged Messenger"
       \vspace #2
 
       \fill-line {
         \null
-        \fontsize #5 \bold "TACET"
+        \fontsize #3 \bold "TACET"
         \null
       }
 
       \vspace #2
     }
+  }
+
+  \markup {
+    \column {
+      \vspace #2
+
+      "IV: Jupiter, the Bringer of Jollity"
+      \vspace #2
+
+      \fill-line {
+        \null
+        \fontsize #3 \bold "Read mostly-tenor clef original."
+        \null
+      }
+      \vspace #2
+      \fill-line {
+        \null
+        \fontsize #3 \bold "Bass clef bars 309-328 below."
+        \null
+      }
+
+      \vspace #2
+    }
+  }
+
+  \score {
+    \header {
+      piece = "IV: Jupiter, the Bringer of Jollity"
+    }
+    \layout {
+      \context {
+        \Staff \override MultiMeasureRest.expand-limit = #1
+        \consists "Page_turn_engraver"
+      }
+      \context {
+        \StaffGroup
+        \consists "Page_turn_engraver"
+        minimumPageTurnLength = #(ly:make-moment 8/4)
+        minimumRepeatLengthForPageTurn = #(ly:make-moment 8/4)
+      }
+    }
+
+    % Most of Saturn is in tenor clef, so I read it as though it were B flat treble and
+    % did inline transposition of just the bass clef sections.
+    \new StaffGroup <<
+      \new Staff \with {
+        instrumentName = "Trom 1 "
+        shortInstrumentName = "1. "
+      } \jupone
+      \new Staff \with {
+        instrumentName = "Trom 2 "
+        shortInstrumentName = "2. "
+      } \juptwo
+    >>
   }
 
   \score {
